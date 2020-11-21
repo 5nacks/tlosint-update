@@ -5,7 +5,7 @@ tput setaf 5;echo "#################"
 
 #Update script
 cd /usr/share/updater
-git pull
+git pull --force
 
 echo "[+] Update System.."
 sudo apt update -qq
