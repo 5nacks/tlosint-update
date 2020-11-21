@@ -11,12 +11,6 @@ echo "[+] Update System.."
 sudo apt update -qq
 sudo apt upgrade -qq -y
 
-tput setaf 5;echo "[+] Updating youtube-dl..."
-{
-        sudo -H pip3 install --upgrade youtube-dl
-} 
-tput setaf 2;echo "[+] Done."
-
 #################
 
 tput setaf 5;echo "[+] Updating Twint..."
@@ -51,20 +45,6 @@ tput setaf 5;echo "[+] Updating PhoneInfoga..."
         	sudo git pull https://github.com/sundowndev/PhoneInfoga.git --rebase
 	else
 		sudo git clone https://github.com/sundowndev/PhoneInfoga.git /usr/share/phoneinfoga
-	fi
-}
-tput setaf 2;echo "[+] Done."
-
-###################
-
-tput setaf 5;echo "[+] Updating theHarvester..."
-{
-        if [ -d "/usr/share/theHarvester" ]; then        
-	
-		cd /usr/share/theHarvester
-        	sudo git pull https://github.com/laramies/theHarvester.git  --rebase
-	else
-		sudo git clone https://github.com/laramies/theHarvester.git /usr/share/theHarvester
 	fi
 }
 tput setaf 2;echo "[+] Done."
@@ -139,22 +119,6 @@ tput setaf 5;echo "[+] Updating Metagoofil..."
         	sudo git pull https://github.com/opsdisk/metagoofil.git --rebase
 	else
 		sudo git clone https://github.com/opsdisk/metagoofil /usr/share/metagoofil
-	fi
-} 
-tput setaf 2;echo "[+] Done."
-
-##########################
-
-tput setaf 5;echo "[+] Updating OSINT-Search..."
-{
-        if [ -d "/usr/share/OSINT-Search" ]; then        
-	
-		cd /usr/share/OSINT-Search
-        	sudo git pull https://github.com/am0nt31r0/OSINT-Search.git --rebase
-        	sudo pip3 install git+https://github.com/abenassi/Google-Search-API --upgrade
-       		sudo pip3 install https://github.com/PaulSec/API-dnsdumpster.com/archive/master.zip --user
-	else
-		sudo git clone https://github.com/am0nt31r0/OSINT-Search /usr/share/OSINT-Search
 	fi
 } 
 tput setaf 2;echo "[+] Done."
