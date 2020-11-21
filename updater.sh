@@ -3,6 +3,7 @@ tput setaf 5;echo "#################"
 tput setaf 5;echo "# OSINT Updater #"
 tput setaf 5;echo "#################"
 
+#Update script
 cd /usr/share/updater
 git pull
 
